@@ -1,4 +1,4 @@
-## KATA SKELETON DANIELESAULSCILLIA - PHP VERSION
+## KATA HOWMUCH - PHP
 
 # Kata Description
 I always thought that my old friend John was rather richer than he looked, but I never knew exactly how much money he actually had. One day (as I was plying him with questions) he said:
