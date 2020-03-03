@@ -17,8 +17,21 @@ class HowMuchTest extends TestCase
         $this->assertEquals(1, 1);
     }
 
-    public function testHandleReturnTrue(): void
+    public function test37DivisionBy7GivesRestOf2(): void
     {
-        $this->assertEquals(true, $this->howMuch->handle());
+        $value = 37;
+
+        $result = $this->howMuch->checkDivisionBy7GivesRestOf2($value);
+
+        $this->assertEquals(true, $result);
+    }
+
+    public function test36DivisionBy7DoesNotGiveRestOf2(): void
+    {
+        $value = 36;
+
+        $result = $this->howMuch->checkDivisionBy7GivesRestOf2($value);
+
+        $this->assertEquals(false, $result);
     }
 }
