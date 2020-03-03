@@ -4,28 +4,50 @@ namespace Kata;
 
 class HowMuch
 {
+    private $value;
+
+    public function __construct(int $value = 0)
+    {
+        $this->setValue($value);
+    }
+
     public function handle(): bool
     {
         return true;
     }
 
-    public function checkDivisionBy7GivesRestOf2(int $value): bool
+    public function setValue(int $value)
     {
-        return ($value % 7 === 2);
+        $this->value = $value;
     }
 
-    public function checkDivisionBy9GivesRestOf1(int $value): bool
+    public function checkDivisionBy7GivesRestOf2(): bool
     {
-        return ($value % 9 === 1);
+        return $this->checkDivisionBy(7, 2);
     }
 
-    public function getDivisionBy7(int $value): int
+    public function checkDivisionBy9GivesRestOf1(): bool
     {
-        return intval($value / 7);
+        return $this->checkDivisionBy(9, 1);
     }
 
-    public function getDivisionBy9(int $value): int
+    private function checkDivisionBy(int $divider, int $rest): bool
     {
-        return intval($value / 9);
+        return ($this->value % $divider === $rest);
+    }
+
+    public function getDivisionBy7(): int
+    {
+        return $this->getDivisionBy(7);
+    }
+
+    public function getDivisionBy9(): int
+    {
+        return $this->getDivisionBy(9);
+    }
+
+    private function getDivisionBy(int $divider): int
+    {
+        return intval($this->value / $divider);
     }
 }
