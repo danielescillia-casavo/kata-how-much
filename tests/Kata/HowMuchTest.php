@@ -3,13 +3,13 @@
 namespace Kata;
 
 use PHPUnit\Framework\TestCase;
-use Kata\Index;
+use Kata\HowMuch;
 
-class IndexTest extends TestCase
+class HowMuchTest extends TestCase
 {
     protected function setUp(): void
     {
-        $this->index = new Index();
+        $this->howMuch = new HowMuch();
     }
 
     public function testShallPass(): void
@@ -19,6 +19,6 @@ class IndexTest extends TestCase
 
     public function testHandleReturnTrue(): void
     {
-        $this->assertEquals(true, $this->index->handle());
+        $this->assertEquals(true, $this->howMuch->handle());
     }
 }

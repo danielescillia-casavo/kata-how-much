@@ -2,7 +2,7 @@
 
 namespace Kata;
 
-class Index
+class HowMuch
 {
     public function handle(): bool
     {
