@@ -13,4 +13,9 @@ class HowMuch
     {
         return ($value % 7 === 2);
     }
+
+    public function checkDivisionBy9GivesRestOf1(int $value): bool
+    {
+        return ($value % 9 === 1);
+    }
 }

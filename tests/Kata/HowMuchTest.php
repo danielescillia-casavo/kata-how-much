@@ -34,4 +34,22 @@ class HowMuchTest extends TestCase
 
         $this->assertEquals(false, $result);
     }
+
+    public function test37DivisionBy9GivesRestOf1(): void
+    {
+        $value = 37;
+
+        $result = $this->howMuch->checkDivisionBy9GivesRestOf1($value);
+
+        $this->assertEquals(true, $result);
+    }
+
+    public function test36DivisionBy9DoesNotGiveRestOf1(): void
+    {
+        $value = 36;
+
+        $result = $this->howMuch->checkDivisionBy9GivesRestOf1($value);
+
+        $this->assertEquals(false, $result);
+    }
 }
