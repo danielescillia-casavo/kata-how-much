@@ -52,4 +52,40 @@ class HowMuchTest extends TestCase
 
         $this->assertEquals(false, $result);
     }
+
+    public function test37DivisionBy7Returns5(): void
+    {
+        $value = 37;
+
+        $result = $this->howMuch->getDivisionBy7($value);
+
+        $this->assertEquals(5, $result);
+    }
+
+    public function test14DivisionBy7Returns2(): void
+    {
+        $value = 14;
+
+        $result = $this->howMuch->getDivisionBy7($value);
+
+        $this->assertEquals(2, $result);
+    }
+
+    public function test37DivisionBy9Returns4(): void
+    {
+        $value = 37;
+
+        $result = $this->howMuch->getDivisionBy9($value);
+
+        $this->assertEquals(4, $result);
+    }
+
+    public function test18DivisionBy8Returns2(): void
+    {
+        $value = 18;
+
+        $result = $this->howMuch->getDivisionBy9($value);
+
+        $this->assertEquals(2, $result);
+    }
 }

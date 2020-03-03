@@ -18,4 +18,14 @@ class HowMuch
     {
         return ($value % 9 === 1);
     }
+
+    public function getDivisionBy7(int $value): int
+    {
+        return intval($value / 7);
+    }
+
+    public function getDivisionBy9(int $value): int
+    {
+        return intval($value / 9);
+    }
 }
