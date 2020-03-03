@@ -2,18 +2,13 @@
 
 namespace Kata;
 
-class HowMuch
+class Division
 {
     private $value;
 
     public function __construct(int $value = 0)
     {
         $this->setValue($value);
-    }
-
-    public function handle(): bool
-    {
-        return true;
     }
 
     public function setValue(int $value)
